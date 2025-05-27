@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    background-color: white;
+    color: #555;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/hero-image.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    color: #e2dbdb;
+    font-size: 240%;
+    text-transform: none;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    margin: 20px 0px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 250px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    margin-left: 20px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #cf6d17;
+    color: #fff;
+}
+
+img.logo {
+    width: 60px;
+    /* or any desired size */
+    height: 60px;
+    /* must be equal to width */
+    border-radius: 50%;
+    object-fit: cover;
+    /* ensures the image covers the circle without stretching */
+    margin: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    /* margin: 10px 20px; */
+
+    border-bottom: 2px solid #e67e22;
+}
+
+section{
+    padding: 100px 0;
+
+}
+
+h2{
+    font-weight: 300;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+H2:after{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.box{
+    padding: 1%;
+}
+
+.feature-box{
+    margin : 0 20px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.meals-showcase li {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.meal-photo {
+    position: relative; /* Needed for overlay positioning */
+    overflow: hidden; /* Contains the scaled image */
+    width: 100%;
+    height: 200px; /* Match your image height */
+}
+
+.meal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.15);
+    transition: transform 0.3s, opacity 0.3s; /* Smooth effects */
+    opacity: 0.85; /* Slight transparency */
+    filter: brightness(0.9); /* Subtle darkening */
+}
+
+/* Dark overlay */
+.meal-photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black with 30% opacity */
+    z-index: 1;
+}
+
+/* Hover effects */
+.meal-photo:hover img {
+    transform: scale(1.05); /* Slightly reduce zoom on hover */
+    opacity: 1; /* Full opacity on hover */
+    filter: brightness(1); /* Normal brightness on hover */
+}
+
+
+
+
